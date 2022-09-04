@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import RepositoriesList from "./components/RepositoriesList";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div>
+      <h1>Search For a Package</h1>
+      <RepositoriesList />
+    </div>
   );
-}
+};
 
 export default App;

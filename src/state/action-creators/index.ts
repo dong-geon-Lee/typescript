@@ -3,7 +3,7 @@ import { Dispatch } from "redux";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-const searchRepositories =
+export const searchRepositories =
   (term: string) => async (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.SEARCH_REPOSITORIES,
@@ -23,6 +23,7 @@ const searchRepositories =
         return result.package.name;
       });
 
+      console.log(names, "name list");
       dispatch({
         type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
         payload: names,
